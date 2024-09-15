@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    button {
+        color: #fff;
+        padding: 8px 1em;
+        width: 100px;
+        background-color: #42b883;
+        border-radius: 8px;
+        border: 0;
+        cursor: pointer;
+        margin: 0 auto;
+        margin-top: 150px;
+        display: block;
+    }
+</style>
+
+<body>
+    <button onclick="downloadFile('./激活码获取 Setup 1.0.0.exe', 'setup.exe');">点击下载</button>
+    <script>
+        function downloadFile(url, fileName) {
+            const link = document.createElement('a');
+            link.href = url;
+            link.download = fileName || 'file'; // 指定下载的文件名  
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        }
+
+
+    </script>
+</body>
+
+</html>
