@@ -1,0 +1,6 @@
+{
+    "crons": [{
+      "path": "./index.js",
+      "schedule": "0 10 * * *"
+    }]
+  }
